@@ -1,0 +1,28 @@
+@WeatherChecker_Adam_Biurkowski_HostAddress = http://localhost:7254
+@access_token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0QGV4YW1wbGUuY29tIiwic3ViIjoidGVzdEBleGFtcGxlLmNvbSIsImp0aSI6IjZmYTc5NGViLWQxMDUtNDYxNy05MDZiLTYxOGQ3MDRhOGMyNyIsImV4cCI6MTc0Mzc5MTkyMiwiaXNzIjoiWW91ckFwcCIsImF1ZCI6IllvdXJBcHAifQ.nIIdk5my8qLK2e0xdLGy1pw5qu-4X67vtbtnIqfz_v8
+
+
+### 
+POST https://localhost:7254/api/account/register
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "Password123"
+}
+
+### 
+POST https://localhost:7254/api/account/login
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "Password123"
+}
+
+### 
+GET https://localhost:7254/weatherforecast
+Authorization: Bearer {{access_token}}
+Accept: application/json
+
+
